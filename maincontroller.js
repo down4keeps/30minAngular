@@ -46,4 +46,15 @@ app.controller("MainController", function($scope){
             live: true
 		}
 	];
+	$scope.newPerson = null;
+    $scope.addNew = function() {
+        if ($scope.newPerson != null && $scope.newPerson != "") {
+            $scope.people.push({
+                id: $scope.people.length,
+                name: $scope.newPerson,
+                live: true,
+                music: []
+            });
+        }
+    }
 });

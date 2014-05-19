@@ -11,9 +11,8 @@
         <ul>
             <li ng-repeat='person in people | filter:searchText' ng-show='person.live == true'>#{{person.id}} {{person.name}}</li>
         </ul>
-        <ul>
-            <li ng-repeat='person in people | filter:searchText' ng-hide='person.live == false'>#{{person.id}} {{person.name}}</li>
-        </ul>
+        <input type='text' ng-model='newPerson' />
+        <button ng-click='addNew()'>Add</button>
 	</div>
 </body>
 </html>
